@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ballon Pop</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <!-- create background Class/Here I want to make whole screen as background-->
+
+        <!-- create ballons Div-->
+        <div class="balloon">
+        <img src="purple.gif" alt="" class = "redBalloon"/>
+        <img src="gray.gif" alt="" class = "redBalloon"/>
+        <img src="pink.gif" alt="" class = "redBalloon"/>
+        <img src="green.png" alt="" class = "redBalloon"/>
+
+        </div> 
+
+         <!-- create score board -->
+        <div class = "score-board">
+        <h1>Total Popped<span class = "score">0</span></h1>
+        </div>
+        <div class = "popWindow">
+            <div class="Winner">
+                <h3>Congratulations</h3>
+                <h3>You Popped all Balloons</h3>
+            </div>
+            <div class = "Loser">
+                <h3>You did not pop all</h3>
+                <h3>You Popped<span class = "score">0</span>Balloons</h3>
+                <p>Play Again?</p>
+                    <button class=""restart">Yes</button>
+                    <button class=""Cancel">No</button>
+                
+
+
+            </div>
+        </div>
+
+        <!--Create Buttons for start, restart, cancel  -->
+        <h3>What do you want to do?</h3>
+        <div class = "gameControls">
+            
+            <div><button class="startBtn">Start</button></div>
+            <div><button class="reStart">Re-Start</button></div>
+            <div><button class="Cancel">Cancel</button></div>
+        </div>
+    
+
+
+       
+
+
+        
+
+
+
+        <script src="app.js" async defer></script>
+    </body>
+</html>

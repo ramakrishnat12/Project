@@ -1,0 +1,60 @@
+/* main style */
+*{
+    margin: 0;
+    padding:0;
+}
+
+/* background */
+
+body{
+    background: linear-gradient(20deg,blue, green);
+    background-position: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Ballon */
+
+.redBalloon{
+    top: 400vh;
+    width: 20vw;
+    height:25vh;
+}
+
+
+/* score-board */
+.score-board{
+    background: white;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+}
+
+
+/* buttons */
+.gameControls{
+    background: white;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    top:0px;
+    right: 300px;
+}
+
+
+
+/* keyframes for bubbles to move */
+
+
+
+
+
