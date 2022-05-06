@@ -1,7 +1,7 @@
 // variable declaration total popped ballons, 
 
 // const balloonArray = ['../BallonpopGame/blue.gif','../BallonpopGame/gray.gif','../BallonpopGame/green.png','../BallonpopGame/pink.gif'];
-let scores = document.querySelectorAll('.score');
+
 
 const divballon = document.createElement("div")
 const ballonImg = document.createElement("img")
@@ -10,7 +10,7 @@ divballon.appendChild(ballonImg)
 
 const divballoon=document.querySelectorAll(".balloon")
 
-// const image = document.getElementsByClassName('ballon') 
+const image = document.getElementsByClassName('ballon') 
 const gameControls = document.querySelector(".gameControls")
 gameControls.append(divballon)
 
@@ -23,7 +23,15 @@ for (let i=0; i<divballoon.length; i++){
     divballoon[i].classList.add("showballoon");
 }
 
+}
+let p1 = document.querySelector('.p1');
+let p2 = document.querySelector('.p2');
+// ----------------Score and remove balloon logic----------------
+
+let scores = document.querySelectorAll('.score');
 let pop_Balloon=0;
+let playerOne = 0;
+let playerTwo = 0;
 
 function deleteBalloon(elem){
     elem.remove();
@@ -38,31 +46,62 @@ function scoreUpdate(){
 
 document.addEventListener('click',function(event){
     if(event.target.classList.contains('redBalloon')){
-       deleteBalloon(event.target);
-       console.log(pop_Balloon);
+       
+        deleteBalloon(event.target);
+    //    console.log(pop_Balloon);
     }
 })
-}
-
-var timeLeft = 30;
-var elem = document.getElementById('some_div');
-var timerId = setInterval(countdown, 1000);
 
 
-function countdown() {
+// ----------------Timmer-------------------
+
+document.getElementById('myStr').addEventListener("click", function(){
+
+    var timeleft = 5;
+
+    var downloadTimer = setInterval(function function1(){
+        document.getElementById("some_div").innerHTML = timeleft + " "+"seconds remaining";
+
+        timeleft -= 1;
+        if(timeleft<=0){
+            clearInterval(downloadTimer);
+            document.getElementById("some_div").innerHTML = "Time is up"
+            playerOne = Number(document.querySelector('.score').textContent)
+            // document.getElementById('playerOneScore').innerHTML = playerOne;
+            console.log(playerOne);
+            if (p1.classList.contains('current-player')){
+                p1.classList.remove('current-player');
+                p2.classList.add('current-player');
+            }else {
+                p2.classList.remove('current-player');
+                p1.classList.add('current-player');
+            }
+
+                
+        }
+        },1000);
+
     
-    if (timeLeft == -1) {
-        clearTimeout(timerId);
-        doSomething();
-    } else {
-        elem.innerHTML = timeLeft + ' seconds remaining';
-        timeLeft--;
-    }
-}
+    });
 
-function doSomething(){
-    window.alert("time is out");
-}
+    // document.getElementsByClassName('reStart').addEventListener("click", switchPlayer());
+
+    // function switchPlayer(){
+    //     if (p1.classList.contains('current-player')){
+    //         p1.classList.remove('current-player');
+    //         p2.classList.add('current-player');
+    //     }else {
+    //         p2.classList.remove('current-player');
+    //         p1.classList.add('current-player');
+    //     }
+    // }
+    
+
+
+
+
+
+
     
 // //divballoon.classList.remove("hidden") 
 // console.log(divballoon);

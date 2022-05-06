@@ -99,7 +99,8 @@
         <!-- score Board -->
         <div id="some_div"></div>
         <div class = "score-board">
-            
+         <p class="current-player p1">Player One <span id = "playerOneScore"> 0 </span></p>
+         <p class = "p2">Player Two</p>   
         <p>Total Popped <span class = "score"> 0 </span></p>
        
         </div>
@@ -126,8 +127,8 @@
         <div class ="gameControls">
             <h3 id="demo">What do you want to do?</h3>
             <div class = "bnt">
-                <div><button onclick = "countdown()" class = "startBtn" id="myStr">Start</button></div>
-                <div><button class = "reStart" onclick="window.location.reload();">Re-Start</button></div>
+                <div><button class = "startBtn" id="myStr">Start</button></div>
+                <div><button id='rest' class = "reStart" onclick="window.location.reload();">Re-Start</button></div>
                 <div><button class = "Cancel" onclick="window.close();">Cancel</button></div>
             </div>
         </div>
