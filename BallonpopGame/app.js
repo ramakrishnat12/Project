@@ -1,7 +1,13 @@
 // variable declaration total popped ballons, 
 
-// const balloonArray = ['../BallonpopGame/blue.gif','../BallonpopGame/gray.gif','../BallonpopGame/green.png','../BallonpopGame/pink.gif'];
-
+let p1 = document.querySelector('.p1');
+let p2 = document.querySelector('.p2');
+let pop_Balloon=0;
+let playerOne = 0;
+let playerTwo = 0;
+let scores = document.querySelectorAll('.score');
+var player1result;
+var player2result;
 
 const divballon = document.createElement("div")
 const ballonImg = document.createElement("img")
@@ -18,20 +24,16 @@ const start_button = document.getElementById("myStr");
 start_button.addEventListener("click", myFunction);
 
 function myFunction(){
-    console.log("disp");
+    // console.log("disp");
+
 for (let i=0; i<divballoon.length; i++){
+
     divballoon[i].classList.add("showballoon");
 }
 
 }
-let p1 = document.querySelector('.p1');
-let p2 = document.querySelector('.p2');
-// ----------------Score and remove balloon logic----------------
 
-let scores = document.querySelectorAll('.score');
-let pop_Balloon=0;
-let playerOne = 0;
-let playerTwo = 0;
+// ----------------Score and remove balloon logic----------------
 
 function deleteBalloon(elem){
     elem.remove();
@@ -57,7 +59,7 @@ document.addEventListener('click',function(event){
 
 document.getElementById('myStr').addEventListener("click", function(){
 
-    var timeleft = 5;
+    var timeleft = 10;
 
     var downloadTimer = setInterval(function function1(){
         document.getElementById("some_div").innerHTML = timeleft + " "+"seconds remaining";
@@ -68,21 +70,61 @@ document.getElementById('myStr').addEventListener("click", function(){
             document.getElementById("some_div").innerHTML = "Time is up"
             playerOne = Number(document.querySelector('.score').textContent)
             // document.getElementById('playerOneScore').innerHTML = playerOne;
-            console.log(playerOne);
+            // console.log(playerOne);
+            let pla1= document.getElementById('playerOneScore').innerHTML;
+            let pla2 = document.getElementById('twoScore').innerHTML;
+            // console.log(Number(pla1));
+            // console.log(pla2);
+            // console.log(Number(pop_Balloon));
+            
+           
+
             if (p1.classList.contains('current-player')){
                 p1.classList.remove('current-player');
                 p2.classList.add('current-player');
+                let pla1 = playerOne;
+                document.getElementById('playerOneScore').innerHTML = playerOne;
+                document.getElementById('demo').innerHTML = "Player Two Click on Start to Play"
+                player1result= Number(pop_Balloon);
+                // console.log(player1result);
+                pop_Balloon=0;
+                
+                
+
             }else {
                 p2.classList.remove('current-player');
                 p1.classList.add('current-player');
-            }
+                document.getElementById('twoScore').innerHTML = playerOne;
+                player2result= Number(pop_Balloon);
+                // console.log(player2result);
 
+            }
+            
                 
         }
-        },1000);
+        
+///////////////Players score comparision///////////////////////////
 
+        if (player1result>player2result){
+            console.log("player1 wins");
+            document.getElementById('demo').innerHTML = "Player One won the game!<br> <br>What do you want to do?"
+        }
+        else{
+            if (player2result>player1result){
+                document.getElementById('demo').innerHTML = "Player Two won the game!<br> <br>What do you want to do?"
+                console.log("player2 wins")
+            }
+            else{
+                if (player1result==player2result){console.log("Tie")}
+            }
+            
+        }
+        
+        },1000);
+   
     
     });
+  
 
     // document.getElementsByClassName('reStart').addEventListener("click", switchPlayer());
 
@@ -165,5 +207,5 @@ document.getElementById('myStr').addEventListener("click", function(){
 
 // display both players score and who won!
 
-// 
+// // const balloonArray = ['../BallonpopGame/blue.gif','../BallonpopGame/gray.gif','../BallonpopGame/green.png','../BallonpopGame/pink.gif'];
 
