@@ -69,13 +69,10 @@ document.getElementById('myStr').addEventListener("click", function(){
             clearInterval(downloadTimer);
             document.getElementById("some_div").innerHTML = "Time is up"
             playerOne = Number(document.querySelector('.score').textContent)
-            // document.getElementById('playerOneScore').innerHTML = playerOne;
-            // console.log(playerOne);
+
             let pla1= document.getElementById('playerOneScore').innerHTML;
             let pla2 = document.getElementById('twoScore').innerHTML;
-            // console.log(Number(pla1));
-            // console.log(pla2);
-            // console.log(Number(pop_Balloon));
+
             
            
 

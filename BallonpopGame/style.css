@@ -25,7 +25,9 @@ body{
     }
 }
 .showballoon{
+    animation-duration: 10s;
     animation: balloonanimation 10s ease-in-out infinite;
+    
 }
 
 
