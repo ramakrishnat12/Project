@@ -1,4 +1,4 @@
-Balloon Pop! game:
+Balloon Pop! game: 
 
 A simple balloon pop game built using the concepts of Javascript, HTMl, CSS.
 This is a two player game.
@@ -11,4 +11,4 @@ Each player has got 10 seconds to pop maximum number of balloons and then it wil
 ->Once 10 seconds is done it will display who won the game and it will ask for what do you want to do next.
 ->Players has option to 'Re-Start' the game or to 'Cancel' the game.
 
-Have fun playing my Balloon Pop Game.
+Have fun playing my Balloon Pop Game. 
